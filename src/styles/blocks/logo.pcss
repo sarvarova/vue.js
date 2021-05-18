@@ -1,0 +1,24 @@
+.logo {
+  font-weight: 800;
+  color: $text-color;
+  text-decoration: none;
+  font-size: 36px;
+}
+
+.iconed-link {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  color: $links-color;
+  font-size: 18px;
+  font-weight: bold;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: svg-load('link.svg', fill=$links-color) center center no-repeat;
+    margin-right: 20px;
+  }
+}
