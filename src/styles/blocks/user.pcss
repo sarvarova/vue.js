@@ -7,6 +7,10 @@
     justify-content: flex-end;
     align-items: center;
     //margin-bottom: 58px;
+
+    @include phones {
+      padding: 0 25%;
+    }
 }
 
 .userinfo__title {
@@ -14,8 +18,8 @@
   color: rgba($text-color, .4);
   font-weight: 600;
   margin-bottom: 20px;
-  text-align: right;
-  margin-right: 40px;
+  text-align: center;
+  //margin-right: 40px;
 }
 
 .userinfo__name {
@@ -24,6 +28,11 @@
   line-height: 1;
   flex-basis: 400px;
   text-align: left;
+
+  @include phones {
+    font-size: 36px;
+    text-align: center;
+  }
 }
 
 .user__data {

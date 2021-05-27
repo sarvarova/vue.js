@@ -8,19 +8,35 @@
 .footer__container {
   display: flex;
   justify-content: space-between;
+
+    @include phones {
+      flex-direction: column;
+    }
 }
 
 .footer__copyright {
   width: 25%;
   display: flex;
   color: #464E62;
-  justify-content: space-between;
- 
+
+    @include desktop {
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 20%;
+    }
+
+    @include tablets {
+      width: 30%; 
+      flex-direction: column;
+    }
+
+    @include phones {
+      width: 120%;
+    }
 }
 
 .footer__copyright-col {
   margin-right: 50px;
-  
 }
 
 .footer__copyright-userinfo {
@@ -53,6 +69,7 @@
   padding-top: 14px;
 }
 
+
 .footer__data-menu {
   margin-bottom: 60px;
 
@@ -66,9 +83,17 @@
 
 .footer__data-content {
   display: flex;
-  justify-content: space-between;
+
+    @include tablets {
+      flex-direction: column;
+  }
 }
 
 .footer__data-col {
   width: 46%;
+
+    @include tablets {
+     width: 90%;
+     margin-bottom: 50px;
+  }
 }

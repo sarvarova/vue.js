@@ -1,9 +1,17 @@
 .values {
   margin-bottom: 300px;
+
+  @include phones {
+    margin-bottom: 75px;
+  }
 }
 
 .values__container {
   position: relative;
+
+  @include tablets {
+    padding-bottom: 350px;
+  }
 
   &:before {
     content: "";
@@ -14,6 +22,18 @@
     height: 79%;
     width: 69%;
     left: -32%;
+
+    @include tablets {
+      bottom: 0;
+      left: 50%;
+      height: 300px;
+      transform: translateX(-50%);
+      background-position: center center;
+    }
+
+    @include phones {
+      width: 100%;
+    }
   }
 }
 
@@ -25,20 +45,44 @@
   margin-bottom: 82px;
   display: flex;
   justify-content: center;
+
+  @include tablets {
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+  }
 }
 
 .values__title-container {
-  width: 44%;
+  width: 47%;
+
+  @include desktop {
+    width: 42%;
+    margin-left: 0;
+  }
+  @include tablets {
+    width: 68%;
+    text-align: center;
+  }
+  @include phones {
+    width: 100%;
+    margin-left: 0;
+    text-align: left;
+  }
 }
 
 .values__title-text {
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 55px;
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .values__content {
-  width: 127%;
+  width: 105%;
   color: rgba($text-color, .5);
   font-weight: 600;
   line-height: 1.8;
@@ -48,8 +92,16 @@
   display: flex;
   justify-content: flex-end;
   margin-right: -18%;
+
+  @include tablets {
+    justify-content: center;
+  }
 }
 
 .values__widget-container {
   width: 66%;
+
+  @include tablets {
+    width: 95%;
+  }
 }

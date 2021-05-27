@@ -1,4 +1,12 @@
 .welcome-section {
     background: url('~images/content/welcome.jpg') top / cover no-repeat;
     padding-bottom: 230px;
+
+    @include tablets {
+        background: url('~images/content/welcome.jpg') top left 58% / cover no-repeat;
+    }
+
+    @include phones {
+        background: url('~images/content/welcome.jpg') top left 69% / cover no-repeat;
+      }
 }
