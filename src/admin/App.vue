@@ -40,6 +40,27 @@ export default {
 @import "normalize.css";
 @import "../styles/mixins.pcss";
 @import "../styles/layout/base.pcss";
+
+.page-component {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.page-content {
+  padding: 60px 0 20px;
+  background: url("../images/content/admin.jpg") center center / cover no-repeat;
+  flex: 1;
+}
+.page-title {
+  margin-right: 60px;
+  font-size: 21px;
+  font-weight: bold;
+  color: $text-color;
+}
+.page-header {
+  display: flex;
+  margin-bottom: 60px;
+}
 </style>
 
 <style lang="postcss" scoped src="./app.pcss"></style>

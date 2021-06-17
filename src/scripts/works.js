@@ -1,4 +1,8 @@
-import Vue from 'vue';
+import Vue from "vue";
+import axios from "axios";
+import config from "../../env.paths.json"
+
+axios.defaults.baseURL = config.BASE_URL;
 
 const thumbs = {
     props: ["works", 'currentWork'],
@@ -49,7 +53,7 @@ new Vue({
     data() {
         return {
             works: [],
-            //currentWork: {},
+            currentWork: {},
             currentIndex: 0
         }
     },
@@ -95,10 +99,10 @@ new Vue({
         }
     },
     
-    created() {
-        const data = require('../data/works.json');
-        this.works = this.requireImagesToArray(data);
-        this.currentWork = this.works[this.currentIndex];
+    async created() {
+        const {data} = await axios.get("/works/94")
+        this.works = data
+        //this.currentWork = this.works[this.currentIndex];
     }
   });
   
