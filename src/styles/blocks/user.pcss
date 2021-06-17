@@ -1,0 +1,100 @@
+.userinfo {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 0 35%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    //margin-bottom: 58px;
+
+    @include phones {
+      padding: 0 25%;
+    }
+}
+
+.userinfo__title {
+  font-size: 18px;
+  color: rgba($text-color, .4);
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  //margin-right: 40px;
+}
+
+.userinfo__name {
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 1;
+  flex-basis: 400px;
+  text-align: left;
+
+  @include phones {
+    font-size: 36px;
+    text-align: center;
+  }
+}
+
+.user__data {
+  width: 100%;
+}
+
+.user__avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+.user__avatar-style {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0px 10px 24px 0 rgba(#000, .3);
+  margin: 0 70px;
+  flex-shrink: 0;
+}
+
+.user__data {
+  font-weight: 600;
+  width: 100%;
+
+  td {
+    padding-bottom: 15px;
+  }
+
+  .user__data-row:last-child td {
+    padding-bottom: 0;
+  }
+}
+
+.user__data-title {
+  color: rgba($text-color, .3);
+}
+
+.user-min {
+  display: flex;
+  align-items: center;
+}
+
+.user-min__avatar {
+  margin-right: 30px;
+}
+
+.user-min__pic-wrapper {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-min__name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.user-min__occ {
+  color: rgba($text-color, .3);
+  font-weight: 600;
+}

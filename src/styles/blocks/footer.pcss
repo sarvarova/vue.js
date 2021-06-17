@@ -1,0 +1,99 @@
+.footer {
+  background: #252830;
+  padding: 88px 0;
+  color: rgba(#fff, .4);
+  line-height: 1.7;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+
+    @include phones {
+      flex-direction: column;
+    }
+}
+
+.footer__copyright {
+  width: 25%;
+  display: flex;
+  color: #464E62;
+
+    @include desktop {
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 20%;
+    }
+
+    @include tablets {
+      width: 30%; 
+      flex-direction: column;
+    }
+
+    @include phones {
+      width: 120%;
+    }
+}
+
+.footer__copyright-col {
+  margin-right: 50px;
+}
+
+.footer__copyright-userinfo {
+  width: 40%;
+  padding-top: 15px;
+}
+
+.footer__copyright-name {
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 34px;
+}
+
+.footer__copyright-year {
+  font-weight: 600;
+  font-size: 48px;
+  white-space: nowrap;
+  
+}
+
+.footer__data-text {
+  margin-bottom: 25px;
+}
+
+.footer__data {
+  width: 66%;
+  padding-top: 14px;
+}
+
+
+.footer__data-menu {
+  margin-bottom: 60px;
+
+  .menu__list {
+    justify-content: flex-start;
+  }
+  .menu__item {
+    margin-right: 9%;
+  }
+}
+
+.footer__data-content {
+  display: flex;
+
+    @include tablets {
+      flex-direction: column;
+  }
+}
+
+.footer__data-col {
+  width: 46%;
+
+    @include tablets {
+     width: 90%;
+     margin-bottom: 50px;
+  }
+}
